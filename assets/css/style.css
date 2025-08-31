@@ -1,12 +1,3 @@
-/* =================================================================== */
-/* ================= ARQUIVO DE ESTILO FINAL COMPLETO ================ */
-/* =================================================================== */
-/* Autor: Nayra Ananias
-/* Versão: 1.0
-/* Descrição: Folha de estilo unificada para o site Studio Nayra Ananias,
-/* incluindo base, componentes e media queries responsivas.
-/* =================================================================== */
-
 /* ---------------------------- FONTES ---------------------------- */
 @font-face {
     font-family: 'PlayfairDisplay-Bold';
@@ -1536,8 +1527,8 @@ section {
         text-align: left;
     }
     .curso-card__imagem {
-        width: 120px; /* Tamanho fixo e menor para a imagem */
-        height: 120px;
+        width: 180px; /* Tamanho fixo e menor para a imagem */
+        height: 200px;
     }
     .curso-card__info {
         align-items: flex-start; /* Alinha o conteúdo à esquerda */
