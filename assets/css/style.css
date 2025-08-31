@@ -802,6 +802,7 @@ section {
     margin-top: var(--espacamento-grande);
     align-items: stretch; /* Garante que os cards na mesma linha tenham a mesma altura */
     padding: 0 var(--espacamento-lateral-mobile);
+    justify-content: center;
 }
 
 .combo-card {
