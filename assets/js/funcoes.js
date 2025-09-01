@@ -596,8 +596,36 @@ function inicializarBotaoWhatsApp() {
     toggleWhatsAppButton();
 }
 
+// ================================================================= //
+// ======= ANIMAÇÃO DE BORDA E REVELAÇÃO PARA SEÇÃO PROPÓSITO ======= //
+// ================================================================= //
+document.addEventListener('DOMContentLoaded', function() {
+    const secaoProposito = document.getElementById('proposito');
+    
+    if (secaoProposito) {
+        const cards = secaoProposito.querySelectorAll('.proposito-v2__card');
 
+        const observador = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    
+                    // Adiciona as classes que disparam as animações nos cards
+                    cards.forEach(card => {
+                        card.classList.add('borda-animada');
+                        card.classList.add('conteudo-revelado');
+                    });
 
+                    // Para a observação após a primeira animação
+                    observador.unobserve(secaoProposito);
+                }
+            });
+        }, {
+            threshold: 0.3 // Começa quando 30% da seção estiver visível
+        });
+
+        observador.observe(secaoProposito);
+    }
+});
 
 /* =================================================================== */
 /* ================== INICIALIZAÇÃO PRINCIPAL             ============ */
